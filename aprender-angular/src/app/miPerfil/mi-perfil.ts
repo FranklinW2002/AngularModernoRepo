@@ -9,5 +9,8 @@ import { Component } from "@angular/core";
 )
 
 export class MiPerfil{
-
+constructor(){
+    alert("!Bienvenido a mi perfil correctamente!");
+    console.log("Se cargo el componente de perfil correctamente");
+}
 }
