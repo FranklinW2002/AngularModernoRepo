@@ -9,8 +9,21 @@ import { Component } from "@angular/core";
 )
 
 export class MiPerfil{
+
+    public nombre: string;
+    public edad: number;
+    public direccion: string;
+    public telefono: string;
+    public ocupacion: string;
+    
+
 constructor(){
-    alert("!Bienvenido a mi perfil correctamente!");
+   this.nombre = "Franklin Muñoz";
+   this.edad = 23;
+   this.ocupacion = "Soy desarollador de Software";
+   this.telefono ="0956854723";
+   this.direccion = "El inca"
+
     console.log("Se cargo el componente de perfil correctamente");
 }
 }
