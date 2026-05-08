@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { Pelicula } from '../pelicula/pelicula';
 import { Usuario } from '../usuario/usuario';
 import { Ventas } from '../ventas/ventas';
@@ -12,7 +12,7 @@ import { Ventas } from '../ventas/ventas';
     }
 )
 
-export class Producto{
+export class Producto {
     
     public nombre: string;
     public marca: string;
@@ -23,5 +23,17 @@ export class Producto{
         this.marca = "Asus";
         this.precio = 500;
         console.log("Se ha cargado el componente de prpducto");
+    }
+
+    ngOnInit(){
+        console.log("El componente esta inicializado");
+    }
+
+    ngDoCheck(){
+        console.log("Compopnnte actualizado");
+    }
+
+    cambiarNombre(){
+        this.nombre="Laptop asus 177";
     }
 }
