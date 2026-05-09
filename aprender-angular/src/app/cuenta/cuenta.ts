@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './cuenta.html',
   styleUrl: './cuenta.css',
 })
-export class Cuenta {}
+export class Cuenta {
+
+  ngOnInit(){
+    console.log("cuenta ha arrancado");
+  }
+  ngOnDestroy(){
+    console.log("Cuenta se ha destruido");
+  }
+}

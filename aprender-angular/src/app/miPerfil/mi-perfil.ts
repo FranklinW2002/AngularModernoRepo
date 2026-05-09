@@ -19,7 +19,7 @@ export class MiPerfil {
     public direccion: string;
     public telefono: string;
     public ocupacion: string;
-
+    public mostrar_cuenta:Boolean=true;     
 
     constructor() {
         this.nombre = "Franklin Muñoz";
@@ -41,5 +41,12 @@ export class MiPerfil {
 
     cambiarDireccion(){
         this.direccion = "tu corazon bb"
+    }
+    ngOnInit(){
+        console.log("El componente esta arranado");
+    }
+
+    mostarCuenta(valor: Boolean){
+        this. mostrar_cuenta = valor;
     }
 }
