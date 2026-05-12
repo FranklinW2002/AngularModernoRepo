@@ -12,7 +12,6 @@ a {
 }
 
 .texto {
-   
     font-size: 20px;
     transition: font-size 0.3s ease;
     
@@ -25,4 +24,13 @@ a {
     background-color: green;
     color: azure;
     padding: 10px;
+}
+.aprobado {
+  color: green;
+  font-weight: bold;
+}
+
+.pendiente {
+  color: red;
+  font-weight: bold;
 }
