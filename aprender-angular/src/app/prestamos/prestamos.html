@@ -1,1 +1,17 @@
-<p>prestamos works!</p>
+
+
+<p>{{web}}</p>
+
+<a [href]="web" 
+[class.existe] = "redirigir"
+target="_blank">Ir a mi web</a>
+
+<br>
+
+@if(redirigir){
+    <p class="texto es-activo">El enlase {{web}} funciona correctamente</p>
+}@else {
+    <p class="texto">Lo sentimos el enlse{{web}} no esta disponible</p>
+}
+
+<button (click)="cambioRedireccion()"> cambiar</button>

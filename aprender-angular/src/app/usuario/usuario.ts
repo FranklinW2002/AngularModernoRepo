@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
-export class Usuario {}
+export class Usuario {
+  web = 'https://amazon.com';
+  redirigir = true;
+
+  cambioRedireccion() {
+    if (this.redirigir) {
+      this.redirigir = false;
+    } else {
+      this.redirigir = true;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+
+a {
+    background-color: orange;
+    color: black;
+    padding: 15px;
+}
+
+.activo {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+}
+
+.texto {
+   
+    font-size: 20px;
+    transition: font-size 0.3s ease;
+    
+}
+
+.texto.es-activo {
+    font-size: 30px;
+}
+.existe{
+    background-color: green;
+    color: azure;
+    padding: 10px;
+}

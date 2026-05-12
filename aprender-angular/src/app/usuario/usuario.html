@@ -1,1 +1,17 @@
-<p>usuario works!</p>
+<h1>Plantilla angular</h1>
+
+<p>{{web}}</p>
+
+<a [href]="web" 
+[class.activo] = "redirigir"
+target="_blank">Ir a mi web</a>
+
+<h2>Estructuras de flujo</h2>
+
+@if(redirigir){
+    <p>El enlase a {{web}} es correcto</p>
+}@else {
+    <p>El enlase  {{web}} no va a funcionar</p>
+}
+
+<button (click)="cambioRedireccion()"> cambiar</button>
