@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Ventas } from '../ventas/ventas';
 
 @Component({
   selector: 'app-usuario',
-  imports: [],
+  imports: [Ventas],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
@@ -11,22 +12,30 @@ export class Usuario {
   redirigir = true;
   marcasAutos = [
 
-    {id:1,nombre:"Toyota"},
-    {id:2,nombre:"Kia"},
-    {id:3,nombre:"Chevrolet"},
-    {id:4,nombre:"Nissan"},
-    {id:5,nombre:"Suzuki"},
-    {id:6,nombre:"Mazda"},
-    {id:7,nombre:"Hyundai"},
-   
+    { id: 1, nombre: "Toyota" },
+    { id: 2, nombre: "Kia" },
+    { id: 3, nombre: "Chevrolet" },
+    { id: 4, nombre: "Nissan" },
+    { id: 5, nombre: "Suzuki" },
+    { id: 6, nombre: "Mazda" },
+    { id: 7, nombre: "Hyundai" },
   ];
 
-  ngOnInit(){
-    this. marcasAutos= [
+  usuario = {
+    id: 1,
+    nombre: "Carlos Palacios",
+    nick: "Carlitos",
+    rol: "as"
+  };
 
-  ];
+
+
+  ngOnInit() {
+    this.marcasAutos = [
+
+    ];
   }
- 
+
 
   cambioRedireccion() {
     if (this.redirigir) {

@@ -21,8 +21,27 @@
       'font-weight': 'bold',
       'margin-bottom': '10px'
      }">
-    <p>Monto: ${{ prestamo.monto }} Estado: {{ prestamo.estado }}</p>
-   
+  <p>Monto: ${{ prestamo.monto }} Estado: {{ prestamo.estado }}</p>
+
 </div>
+}
+
+@switch (prestamo.tipo) {
+@case ('personal') {
+<h4>Prestamo personal</h4>
+<a>interes en %: {{prestamo.interes}}</a>
+}
+@case ('hipotecario') {
+<h4>Prestamo personal</h4>
+<a>interes en %: {{prestamo.interes}}</a>
+}
+@case ('vehicular') {
+<h4>Prestamo personal</h4>
+<a>interes en %: {{prestamo.interes}}</a>
+}
+@default {
+<h4>Tipo de prestamo no reconocido</h4>
+<a>interes en %: {{prestamo.interes}}</a>
+}
 
 }

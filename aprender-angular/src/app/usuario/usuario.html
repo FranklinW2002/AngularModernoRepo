@@ -25,3 +25,19 @@
     }
 
 </ul>
+<!---
+@if(usuario.rol == "admin"){
+    <app-ventas></app-ventas>
+}
+-->
+@switch (usuario.rol) {
+    @case ("admin") {
+        <app-ventas></app-ventas>
+    }
+    @case ('user') {
+        <p>Eres un suario normal</p>
+    }
+    @default{
+        <p>Eres un invitado</p>
+    }
+}
