@@ -41,3 +41,30 @@
         <p>Eres un invitado</p>
     }
 }
+
+<ng-container >
+    <h3>esto esta en ng container</h3>
+</ng-container>
+
+@let pais = "Ecuador";
+
+@let saludo = "Saludos desde " + pais;
+{{saludo}}
+
+<h2>tuberias o pipes en Angular</h2>
+
+{{web | titlecase }}
+<br>
+<br>
+{{web | uppercase }}
+<br>
+<br>
+{{web | lowercase }}
+
+<!--
+@defer{
+    <mi-producto></mi-producto>
+}@placeholder{
+    <h1>se esta cargando el componenteS</h1>
+}
+-->
