@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe } from '@angular/common';
-
+import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DatePipeConfig} from '@angular/common';
+import { cambiaLetras } from '../pipes/cambiaLetras';
+import { ascii } from '../pipes/cambiarAscii';
 import { Ventas } from '../ventas/ventas';
 import { Producto } from "../producto/producto";
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas, Producto, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe],
+  imports: [ascii, Ventas, Producto, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe,cambiaLetras],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
@@ -23,6 +24,8 @@ export class Usuario {
     { id: 6, nombre: "Mazda" },
     { id: 7, nombre: "Hyundai" },
   ];
+
+  fecha = new Date(2030,12,25);
 
   usuario = {
     id: 1,
