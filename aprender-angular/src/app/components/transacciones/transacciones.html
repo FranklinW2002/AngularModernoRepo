@@ -1,0 +1,11 @@
+<h2>Lista de transacciones</h2>
+
+<ol>
+    @for(transaccion of transacciones; track transaccion.id){
+        <li>
+            {{transaccion.descripcion}} -
+            ${{transaccion.monto}} -
+            {{transaccion.tipo}}
+        </li>
+    }
+</ol>

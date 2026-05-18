@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Pelicula } from '../pelicula/pelicula';
+
 import { Usuario } from '../usuario/usuario';
-import { Ventas } from '../ventas/ventas';
+import { Pelicula } from '../pelicula/pelicula';
+
 
 @Component(
     {

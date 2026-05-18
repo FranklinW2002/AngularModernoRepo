@@ -1,0 +1,9 @@
+<h2>Lista de clientes</h2>
+
+<ol>
+    @for(cliente of clientes; track cliente.id){
+        <li>
+            {{cliente.nombre}} {{cliente.apellido}} - Cuenta: {{cliente.cuenta}}
+        </li>
+    }
+</ol>

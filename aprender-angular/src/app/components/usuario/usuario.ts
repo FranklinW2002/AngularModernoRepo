@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DatePipeConfig} from '@angular/common';
-import { cambiaLetras } from '../pipes/cambiaLetras';
-import { ascii } from '../pipes/cambiarAscii';
+import { cambiaLetras } from '../../pipes/cambiaLetras';
+import { ascii } from '../../pipes/cambiarAscii';
 import { Ventas } from '../ventas/ventas';
 import { Producto } from "../producto/producto";
 
