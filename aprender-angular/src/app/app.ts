@@ -4,10 +4,12 @@ import { Component, signal } from '@angular/core';
 //import { MiPerfil } from "./miPerfil/mi-perfil";
 import { Usuario } from './usuario/usuario';
 import { Prestamos } from './prestamos/prestamos';
+import { Pelicula } from './pelicula/pelicula';
+import { Ventas } from './ventas/ventas';
 
 @Component({
   selector: 'app-root',
-  imports: [Prestamos, Usuario],
+  imports: [Ventas],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
