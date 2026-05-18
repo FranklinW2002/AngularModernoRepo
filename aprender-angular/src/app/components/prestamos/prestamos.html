@@ -1,47 +1,26 @@
-<p>{{web}}</p>
+<h1>Prestamos</h1>
+<p>
+  <input type="text" [(ngModel)]="monto" />
 
-<a [href]="web" [class.existe]="redirigir" target="_blank">Ir a mi web</a>
+  <select [(ngModel)]="estado">
+    <option value="Aprobado">Aprobado</option>
+    <option value="Pendiente">Pendiente</option>
+    <option value="Rechazado">Rechazado</option>
+  </select>
 
-<br>
+  <button (click)="addPrestamo()">Agregar</button>
+</p>
 
-@if(redirigir){
-<p class="texto es-activo">El enlase {{web}} funciona correctamente</p>
-}@else {
-<p class="texto">Lo sentimos el enlse{{web}} no esta disponible</p>
-}
+@for (prestamo of prestamosList; track prestamo.id; let indice = $index) {
 
-<button (click)="cambioRedireccion()"> cambiar</button>
+  <p>
+    {{prestamo.id}} -
+    ${{prestamo.monto}} -
+    {{prestamo.estado}}
 
-<h2>Lista de Préstamos</h2>
-
-@for (prestamo of prestamosList; track prestamo.id) {
-
-<div [ngStyle]="{
-        'color': prestamo.estado === 'Aprobado' ? 'green' : 'red',
-      'font-weight': 'bold',
-      'margin-bottom': '10px'
-     }">
-  <p>Monto: ${{ prestamo.monto }} Estado: {{ prestamo.estado }}</p>
-
-</div>
-}
-
-@switch (prestamo.tipo) {
-@case ('personal') {
-<h4>Prestamo personal</h4>
-<a>interes en %: {{prestamo.interes}}</a>
-}
-@case ('hipotecario') {
-<h4>Prestamo personal</h4>
-<a>interes en %: {{prestamo.interes}}</a>
-}
-@case ('vehicular') {
-<h4>Prestamo personal</h4>
-<a>interes en %: {{prestamo.interes}}</a>
-}
-@default {
-<h4>Tipo de prestamo no reconocido</h4>
-<a>interes en %: {{prestamo.interes}}</a>
-}
+    <button (click)="deletePrestamo(indice)">
+      Eliminar
+    </button>
+  </p>
 
 }

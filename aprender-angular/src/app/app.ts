@@ -3,10 +3,11 @@ import { Cuenta } from './components/cuenta/cuenta';
 import { Transacciones } from './components/transacciones/transacciones';
 import { config } from './models/config';
 import { Cine } from "./components/cine/cine";
+import { Prestamos } from "./components/prestamos/prestamos";
 
 @Component({
   selector: 'app-root',
-  imports: [Cuenta, Transacciones, Cine],
+  imports: [ Prestamos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

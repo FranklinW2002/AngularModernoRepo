@@ -1,15 +1,30 @@
 <h1>{{titulo}}</h1>
 
+<p>
+    Elije un color 
+    <input type="color" [(ngModel)]="color"
+    
+    >
+</p>
 <ol>
-    @for(pelicula of peliculas;track pelicula.id){
-    <li> {{pelicula.titulo}} - {{pelicula.genero}} - {{pelicula.plataforma}}</li>
+    @for(pelicula of peliculas;track pelicula.id;let indice = $index){
+    <li> {{pelicula.titulo}} - 
+        <samp [ngStyle]="{
+            'background-color':color
+        }">{{pelicula.genero}}</samp> - {{pelicula.plataforma}}
+    ,<Button (click)="deletePelicula(indice)">Borrar</Button>    
+    </li>
     }
 </ol>
 
 
 
 <h1>formulario y tow way data binding</h1>
-<input type="text" [(ngModel)]="mi_pelicula">
+<input type="text" [(ngModel)]="mi_pelicula"
+(focus)="haciendoFoco()"
+(blur)="saliendoDelFoco()"
+(keyup)="pulsandoTeclas($event)"
+>
 
 <button (click)="showPelicula()" > Mostrar pelicula</button>
 
