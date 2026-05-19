@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Transaccion } from '../../models/transaccion';
 import { FormsModule } from '@angular/forms'; 
 @Component({
@@ -20,5 +20,10 @@ export class Transacciones {
     new Transaccion(5, new Date('2025-04-20'), 'Pago de internet', 45.75, 'Débito')
   ];
   this.descripcionTransaccion = ""
+  }
+
+  @Output() mensajeEnviado = new EventEmitter();
+  enviarSaludo(){
+    this.mensajeEnviado.emit("Hola desde transacciones");
   }
 }

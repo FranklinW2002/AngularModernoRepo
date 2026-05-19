@@ -1,0 +1,13 @@
+<hr>
+<h1>Soy el componente padre</h1>
+<p>soy un componente que tiene otro componnete y ese es mi hijo</p>
+<p>Te presento a mi hijo</p>
+{{saludoRecivido}}
+<app-hijo 
+[elNombreDeMiPadre] = "nombrePadre"
+(saludoHijo)="recivirSaludo($event)"
+></app-hijo>
+
+<!-- tipos de atributos html en angular
+<section id="" class="" [conBinding]="" (event)="" [(conbinado)]=""></section>
+-->

@@ -7,7 +7,7 @@ import { Producto } from "../producto/producto";
 
 @Component({
   selector: 'app-usuario',
-  imports: [ascii, Ventas, Producto, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe,cambiaLetras],
+  imports: [],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })

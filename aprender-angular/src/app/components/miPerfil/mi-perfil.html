@@ -1,3 +1,8 @@
+
+<app-cuenta [nombreCliente]="nombreCliente"></app-cuenta>
+<app-transacciones (mensajeEnviado)="recivirmensaje($event)" ></app-transacciones>
+{{mensajeRecivido}}
+<!--
 <h1>Mi nombre es {{nombre}}</h1>
 <h2>Tengo {{edad}} años</h2>
 <strong>{{ocupacion}}</strong>
@@ -22,3 +27,4 @@
 
 <app-prestamos></app-prestamos>
 <app-transacciones></app-transacciones>
+-->

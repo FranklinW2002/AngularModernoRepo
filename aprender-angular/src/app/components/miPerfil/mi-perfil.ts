@@ -19,7 +19,7 @@ export class MiPerfil {
     public direccion: string;
     public telefono: string;
     public ocupacion: string;
-    public mostrar_cuenta:Boolean=true;     
+    public mostrar_cuenta: Boolean = true;
 
     constructor() {
         this.nombre = "Franklin Muñoz";
@@ -31,22 +31,30 @@ export class MiPerfil {
         console.log("Se cargo el componente de perfil correctamente");
     }
 
-    ngDoCheck(){
+    ngDoCheck() {
         console.log("Componente actualizado");
     }
 
-    cambiarEdad(){
+    cambiarEdad() {
         this.edad = 50;
     }
 
-    cambiarDireccion(){
+    cambiarDireccion() {
         this.direccion = "tu corazon bb"
     }
-    ngOnInit(){
+    ngOnInit() {
         console.log("El componente esta arranado");
     }
 
-    mostarCuenta(valor: Boolean){
-        this. mostrar_cuenta = valor;
+    mostarCuenta(valor: Boolean) {
+        this.mostrar_cuenta = valor;
+    }
+
+    nombreCliente: string = "Juan Perez"
+
+    mensajeRecivido: string = "";
+
+    recivirmensaje(mensage: string) {
+        this.mensajeRecivido = mensage;
     }
 }

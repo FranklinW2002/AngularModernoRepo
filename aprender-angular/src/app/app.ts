@@ -4,10 +4,13 @@ import { Transacciones } from './components/transacciones/transacciones';
 import { config } from './models/config';
 import { Cine } from "./components/cine/cine";
 import { Prestamos } from "./components/prestamos/prestamos";
+import { Padre } from './components/padre/padre';
+import { MiPerfil } from './components/miPerfil/mi-perfil';
+
 
 @Component({
   selector: 'app-root',
-  imports: [ Prestamos],
+  imports:[ MiPerfil],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

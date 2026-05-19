@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { Clientes } from '../../models/clientes';
 @Component({
   selector: 'app-cuenta',
@@ -7,6 +7,7 @@ import { Clientes } from '../../models/clientes';
   styleUrl: './cuenta.css',
 })
 export class Cuenta {
+  @Input() nombreCliente:string = ""
   clientes: Array<Clientes>;
   constructor() {
 
