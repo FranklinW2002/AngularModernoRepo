@@ -1,16 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { Cuenta } from './components/cuenta/cuenta';
-import { Transacciones } from './components/transacciones/transacciones';
 import { config } from './models/config';
-import { Cine } from "./components/cine/cine";
-import { Prestamos } from "./components/prestamos/prestamos";
-import { Padre } from './components/padre/padre';
-import { MiPerfil } from './components/miPerfil/mi-perfil';
-
+import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports:[ MiPerfil],
+  imports: [RouterLink, RouterOutlet, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -6,7 +6,7 @@ import { Transacciones } from "../transacciones/transacciones";
 @Component(
     {
         selector: 'mi-perfil',
-        imports: [Cuenta, Prestamos, Transacciones],
+        imports: [Cuenta, Transacciones],
         templateUrl: 'mi-perfil.html',
         styleUrl: 'mi-perfil.css'
     }

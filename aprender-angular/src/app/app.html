@@ -4,14 +4,32 @@
 <h2>"{{description}} {{title()}}</h2>
 <p>Autor:Franklin Muñoz</p>
 
-<mi-perfil></mi-perfil>
+
+<hr>
+<a routerLink="/inicio" routerLinkActive="activarLink">inicio</a>&nbsp;
+<a routerLink="/componentes"  routerLinkActive="activarLink">componentes</a>&nbsp;
+<a routerLink="/plantillas">plantillas</a>&nbsp;
+<a routerLink="/directivas" routerLinkActive="activarLink">directivas</a>&nbsp;
+<a routerLink="/modelos" routerLinkActive="activarLink">modelos</a>&nbsp;
+<a routerLink="/ciclo" routerLinkActive="activarLink">ciclo</a>&nbsp;
+<a routerLink="/comunicacion" routerLinkActive="activarLink">comunicacion</a>&nbsp;
+<a routerLink="/cuenta" routerLinkActive="activarLink">cuenta</a>&nbsp;
+<a routerLink="/transacciones" routerLinkActive="activarLink">transacciones</a>&nbsp;
+<a routerLink="/prestamo" routerLinkActive="activarLink">prestamo</a>&nbsp;
+
+
+<hr>
+<router-outlet>
+
+    <!-- aqui va el componente vinculado a la ruta actual-->
+</router-outlet>
 
 <!--
 
-
+<mi-perfil></mi-perfil>
 <app-padre></app-padre>
-
 <mi-perfil></mi-perfil>
 <app-transacciones></app-transacciones>
 <app-cine></app-cine>
+
 -->
